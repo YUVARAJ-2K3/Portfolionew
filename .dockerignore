@@ -1,0 +1,12 @@
+# Dependencies
+node_modules
+
+# Production build folder
+build
+
+# Docker files
+.dockerignore
+Dockerfile
+
+# Git
+.git
