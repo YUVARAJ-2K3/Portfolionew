@@ -14,7 +14,7 @@ const Hero = () => (
     <div className="text-center z-10 p-4">
       <p className="text-red-500 font-semibold text-lg">Hi there, I'm</p>
       <h1 className="text-5xl md:text-7xl font-extrabold my-3">Yuvaraj S</h1>
-      <p className="text-xl md:text-2xl text-gray-300 mb-8">Devepster | Front-end Developer | programmer</p>
+      <p className="text-xl md:text-2xl text-gray-300 mb-8">DevOpster | Front-end Developer | programmer</p>
       <a
         href="https://drive.google.com/file/d/1Ey7KiSzrMI1xnJHJ27sM65MMCzsk-dCb/view?usp=sharing"
         className="bg-red-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
