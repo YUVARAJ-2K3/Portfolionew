@@ -13,7 +13,6 @@ const About = () => {
     "Web Development": ["HTML", "CSS", "React.js"],
     "Operating Systems": ["RHEL", "Linux", "Windows"],
     "Programming Languages": ["Python", "JavaScript", "Shell Scripting"],
-    "Web Technologies": ["HTML", "CSS", "React JS"],
     "UI/UX Design": ["Wireframing", "Prototyping", "User Research"],
     "Tools":["Git", "VS Code", "Figma"]
 
@@ -21,6 +20,8 @@ const About = () => {
 
   const education = [
     { degree: "Bachelor of Engineering", field: "Computer Science And Engineering", school: " Sri Sai Ram Engineering College, Chennai", year: "2022-2026" },
+    { degree: "Diploma", field: "Mechanical Engineering", school: " Central Polytechnic College, Chennai", year: "2019-2022" },
+    { degree: "SSLC", field: "Matriculation", school: " Srimathi Lakshmiammal Memorial Matriculation Higher Secondary School, Chennai", year: "2018-2019" },
   ];
 
   const location = { city: "Chennai", state: "Tamil Nadu", country: "India" };
