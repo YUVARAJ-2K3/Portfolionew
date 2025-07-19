@@ -1,31 +1,36 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScd4a2cMmq9M7zpK_XwiEW6bixLqsjDjQPzjoWU6P_CD1HQFg/formResponse";
-const FIELD_NAME = "entry.1270603981";
-const FIELD_EMAIL = "entry.486891414";
-const FIELD_MESSAGE = "entry.1000697639";
-
 const Contact = () => {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
 
-  const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append(FIELD_NAME, form.name);
-    formData.append(FIELD_EMAIL, form.email);
-    formData.append(FIELD_MESSAGE, form.message);
-    fetch(GOOGLE_FORM_ACTION_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData,
-    }).then(() => {
-      alert('Message sent!');
-      setForm({ name: '', email: '', message: '' });
-    });
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLScd4a2cMmq9M7zpK_XwiEW6bixLqsjDjQPzjoWU6P_CD1HQFg/formResponse";
+
+    const formBody = new URLSearchParams();
+    formBody.append("entry.1270603981", nameRef.current.value);
+    formBody.append("entry.486891414", emailRef.current.value);
+    formBody.append("entry.1000697639", messageRef.current.value);
+
+    fetch(formUrl, {
+      method: "POST",
+      body: formBody,
+      mode: "no-cors",
+    })
+      .then(() => {
+        alert("✅ Thank you for contacting me! I will reply as soon as possible.");
+        if (nameRef.current) nameRef.current.value = '';
+        if (emailRef.current) emailRef.current.value = '';
+        if (messageRef.current) messageRef.current.value = '';
+      })
+      .catch((error) => {
+        console.error("❌ Error submitting form:", error);
+      });
   };
 
   return (
@@ -60,25 +65,25 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Name"
-              value={form.name}
-              onChange={handleChange}
+              ref={nameRef}
               className="w-full p-4 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              required
             />
             <input
               type="email"
               name="email"
               placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
+              ref={emailRef}
               className="w-full p-4 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              required
             />
             <textarea
               name="message"
               placeholder="Message"
               rows="5"
-              value={form.message}
-              onChange={handleChange}
+              ref={messageRef}
               className="w-full p-4 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+              required
             ></textarea>
             <button type="submit" className="w-full bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-700 transition-colors">
               Send Message
