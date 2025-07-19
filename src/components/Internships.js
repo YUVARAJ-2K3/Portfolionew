@@ -63,7 +63,7 @@ const Internships = () => {
                         <ChevronLeft size={24} />
                     </button>
                     
-                    <div className="w-full md:w-1/2 lg:w-1/3 relative">
+                    <div className="w-full md:w-1/2 lg:w-1/3 relative flex items-center h-full">
                         {internships.map((internship, index) => (
                              <div key={index} className={`absolute w-full transition-all duration-500 ease-in-out
                                 ${index === currentIndex ? 'opacity-100 transform scale-100 z-10' : 'opacity-50 transform scale-90 z-0'}
@@ -71,7 +71,7 @@ const Internships = () => {
                                 ${index === (currentIndex + 1) % internships.length ? 'transform translate-x-[50%]' : ''}
                                 ${ (index !== currentIndex && index !== (currentIndex - 1 + internships.length) % internships.length && index !== (currentIndex + 1) % internships.length) ? 'opacity-0' : ''}
                              `}>
-                                <div className="bg-black border-2 border-red-600 p-8 rounded-lg shadow-lg text-center">
+                                <div className="bg-black border-2 border-red-600 p-8 rounded-lg shadow-lg text-center flex flex-col items-center justify-center h-[350px]">
                                     <img src={internship.logo} alt={`${internship.company} logo`} className="w-24 h-24 mx-auto rounded-full mb-4 border-4 border-gray-700 object-cover"/>
                                     <h3 className="text-xl font-bold text-white">{internship.company}</h3>
                                     <h4 className="text-md text-red-400 mb-2">{internship.role}</h4>

@@ -24,14 +24,15 @@ const Certifications = () => {
     <section id="certifications" className="py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Certifications</SectionTitle>
-        <div className="flex justify-center flex-wrap gap-4 mb-12">
+        <div className="flex justify-center flex-wrap gap-8 mb-12">
           {Object.entries(certifications).map(([key, cert]) => (
             <button
               key={key}
+              className={`p-6 w-56 h-56 flex flex-col items-center justify-center bg-gray-900 rounded-xl transition-all duration-300 shadow-lg text-center ${selectedCert === key ? 'ring-2 ring-red-500 scale-110' : 'opacity-70 hover:opacity-100'}`}
               onClick={() => setSelectedCert(key)}
-              className={`p-2 bg-gray-900 rounded-lg transition-all duration-300 ${selectedCert === key ? 'ring-2 ring-red-500 scale-110' : 'opacity-70 hover:opacity-100'}`}
             >
-              <img src={cert.logo} alt={cert.name} className="h-20 object-contain" />
+              <img src={cert.logo} alt={cert.name} className="h-24 mb-4 object-contain" />
+              <span className="text-white font-semibold text-md mt-2">{cert.name}</span>
             </button>
           ))}
         </div>

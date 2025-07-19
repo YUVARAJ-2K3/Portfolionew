@@ -71,15 +71,15 @@ const About = () => {
     <section id="about" className="py-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>About Me</SectionTitle>
-        <div className="grid md:grid-cols-5 gap-12 items-center">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-5 gap-12 items-center h-full min-h-[400px]">
+          <div className="md:col-span-2 h-full flex items-stretch">
             <img 
               src={AboutImage}
               alt="Laptop on a dark desk" 
-              className="h-full w-auto object-cover rounded-lg shadow-2xl mb-6 md:mb-0"
+              className="h-full w-auto object-cover rounded-lg shadow-2xl mb-6 md:mb-0 flex-1"
             />
           </div>
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 h-full flex flex-col justify-center">
             <p className="text-gray-300 mb-6 leading-relaxed">
             Passionate and detail-oriented programmer with a focus on development, automation, and user experience.Quick learner with strong problem-solving skills and adaptability across diverse tech domains.Eager to grow, take on challenges, and contribute to impactful projects.
             </p>
