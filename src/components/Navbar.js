@@ -11,7 +11,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Portfolio', 'Certifications', 'Internships', 'Contact'];
+  const navLinks = ['Home', 'About', 'Projects', 'Certifications', 'Internships', 'Contact'];
 
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-80 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>

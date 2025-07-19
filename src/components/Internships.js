@@ -2,38 +2,41 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import InternPeLogo from '../assets/images/227628899-c44dd6c1-dc56-4852-b515-2d3261dbff6f.jpg';
+import AdvantageLogo from '../assets/images/advantage.jpg';
+import BreaksLogo from '../assets/images/brakes-india.png';
+import WheelsLogo from '../assets/images/wheels.png';
 
 const Internships = () => {
     const internships = [
         {
-            company: 'Vextra Technologies',
-            role: 'Software Development Intern',
-            description: 'Handled Ansible automation for system monitoring.',
-            logo: 'https://placehold.co/150x150/1a202c/ffffff?text=V'
-        },
-        {
-            company: 'Advantage Pro',
+            company: 'Vectra Technosoft Pvt Ltd',
             role: 'Technical Support Intern',
-            description: 'Provided technical support and troubleshooting.',
-            logo: 'https://placehold.co/150x150/ef4444/ffffff?text=A'
+            description: 'Handled Ansible, Automation, and system monitoring.',
+            logo: AdvantageLogo
+        },
+        {
+            company: 'Vectra Technosoft Pvt Ltd',
+            role: 'Linux System Administrator',
+            description: 'Managed system administration tasks.',
+            logo: AdvantageLogo
         },
         {
             company: 'InternPe',
             role: 'Web Development Intern',
-            description: 'Developed and maintained web applications.',
+            description: 'Worked on UI/UX and User Interface Design in a hybrid model.',
             logo: InternPeLogo
         },
         {
-            company: 'InternPe',
-            role: 'Web Development Intern',
-            description: 'Developed and maintained web applications.',
-            logo: InternPeLogo
+            company: 'Breaks India Limited',
+            role: 'Internship Trainee',
+            description: 'Worked on Quality Assurance and SAP Materials Management (SAP MM).',
+            logo: BreaksLogo
         },
         {
-            company: 'InternPe',
-            role: 'Web Development Intern',
-            description: 'Developed and maintained web applications.',
-            logo: InternPeLogo
+            company: 'Wheels India Limited',
+            role: 'Internship Trainee',
+            description: 'Developed and maintained web applicationsResearched and developed new technologies in R&D.',
+            logo: WheelsLogo
         }
     ];
 
