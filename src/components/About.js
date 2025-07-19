@@ -24,7 +24,10 @@ const About = () => {
     { degree: "SSLC", field: "Matriculation", school: " Srimathi Lakshmiammal Memorial Matriculation Higher Secondary School, Chennai", year: "2018-2019" },
   ];
 
-  const location = { city: "Chennai", state: "Tamil Nadu", country: "India" };
+  const locations = [
+    { city: "Chennai", state: "Tamil Nadu", country: "India" },
+    { city: "Bangalore", state: "Karnataka", country: "India" },
+  ];
 
   const renderContent = () => {
     switch (activeTab) {
@@ -58,9 +61,13 @@ const About = () => {
         );
       case 'location':
         return (
-          <div className="flex items-center">
-            <MapPin className="text-red-500 mr-3" />
-            <p>{location.city}, {location.state}, {location.country}</p>
+          <div>
+            {locations.map(location => (
+              <div key={location.city} className="flex items-center mb-2">
+                <MapPin className="text-red-500 mr-3" />
+                <p>{location.city}, {location.state}, {location.country}</p>
+              </div>
+            ))}
           </div>
         );
       default:
