@@ -19,7 +19,7 @@ const About = () => {
   };
 
   const education = [
-    { degree: "Bachelor of Engineering", field: "Computer Science And Engineering", school: " Sri Sai Ram Engineering College, Chennai", year: "2022-2026" },
+    { degree: "Bachelor of Engineering", field: "Computer Science and Engineering", school: " Sri Sai Ram Engineering College, Chennai", year: "2022-2026" },
     { degree: "Diploma", field: "Mechanical Engineering", school: " Central Polytechnic College, Chennai", year: "2019-2022" },
     { degree: "SSLC", field: "Matriculation", school: " Srimathi Lakshmiammal Memorial Matriculation Higher Secondary School, Chennai", year: "2018-2019" },
   ];
