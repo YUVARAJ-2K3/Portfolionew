@@ -1,0 +1,41 @@
+src/components/About.tsx(5,24): error TS2307: Cannot find module '../assets/images/laptop_code_programming_212332_3840x2400.jpg' or its corresponding type declarations.
+src/components/Certifications.tsx(4,23): error TS2307: Cannot find module '../assets/images/image.png' or its corresponding type declarations.
+src/components/Certifications.tsx(5,24): error TS2307: Cannot find module '../assets/images/image (1).png' or its corresponding type declarations.
+src/components/Certifications.tsx(6,23): error TS2307: Cannot find module '../assets/images/image (2).png' or its corresponding type declarations.
+src/components/Certifications.tsx(7,29): error TS2307: Cannot find module '../assets/images/zero.png' or its corresponding type declarations.
+src/components/Certifications.tsx(8,23): error TS2307: Cannot find module '../assets/images/RHCSA.16393eb5a3fccb604917.png' or its corresponding type declarations.
+src/components/Certifications.tsx(9,22): error TS2307: Cannot find module '../assets/images/RHCE.png' or its corresponding type declarations.
+src/components/Certifications.tsx(10,23): error TS2307: Cannot find module '../assets/images/Do188.png' or its corresponding type declarations.
+src/components/Certifications.tsx(11,22): error TS2307: Cannot find module '../assets/images/Zc certificate .png' or its corresponding type declarations.
+src/components/Contact.tsx(6,19): error TS2554: Expected 1 arguments, but got 0.
+src/components/Contact.tsx(7,20): error TS2554: Expected 1 arguments, but got 0.
+src/components/Contact.tsx(8,22): error TS2554: Expected 1 arguments, but got 0.
+src/components/Contact.tsx(16,57): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(17,57): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(18,60): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(27,46): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(28,48): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(29,52): error TS2339: Property 'value' does not exist on type 'unknown'.
+src/components/Contact.tsx(68,15): error TS2322: Type 'RefObject<unknown>' is not assignable to type 'Ref<HTMLInputElement>'.
+  Type 'RefObject<unknown>' is not assignable to type 'RefObject<HTMLInputElement>'.
+    Type '{}' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 373 more.
+src/components/Contact.tsx(76,15): error TS2322: Type 'RefObject<unknown>' is not assignable to type 'Ref<HTMLInputElement>'.
+  Type 'RefObject<unknown>' is not assignable to type 'RefObject<HTMLInputElement>'.
+    Type '{}' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 373 more.
+src/components/Contact.tsx(83,15): error TS2322: Type 'string' is not assignable to type 'number'.
+src/components/Contact.tsx(84,15): error TS2322: Type 'RefObject<unknown>' is not assignable to type 'Ref<HTMLTextAreaElement>'.
+  Type 'RefObject<unknown>' is not assignable to type 'RefObject<HTMLTextAreaElement>'.
+    Type '{}' is missing the following properties from type 'HTMLTextAreaElement': autocomplete, cols, defaultValue, dirName, and 344 more.
+src/components/Hero.tsx(2,28): error TS2307: Cannot find module '../assets/images/d7232d86a64ec4aa0d74ba3077702dde.png' or its corresponding type declarations.
+src/components/Internships.tsx(4,26): error TS2307: Cannot find module '../assets/images/227628899-c44dd6c1-dc56-4852-b515-2d3261dbff6f.jpg' or its corresponding type declarations.
+src/components/Internships.tsx(5,27): error TS2307: Cannot find module '../assets/images/advantage.jpg' or its corresponding type declarations.
+src/components/Internships.tsx(6,24): error TS2307: Cannot find module '../assets/images/brakes-india.png' or its corresponding type declarations.
+src/components/Internships.tsx(7,24): error TS2307: Cannot find module '../assets/images/wheels.png' or its corresponding type declarations.
+src/components/Portfolio.tsx(5,25): error TS2307: Cannot find module '../assets/images/OIP.jpeg' or its corresponding type declarations.
+src/components/Portfolio.tsx(6,25): error TS2307: Cannot find module '../assets/images/OIP (1).jpeg' or its corresponding type declarations.
+src/components/Portfolio.tsx(7,25): error TS2307: Cannot find module '../assets/images/OIP (2).jpeg' or its corresponding type declarations.
+src/components/Portfolio.tsx(8,25): error TS2307: Cannot find module '../assets/images/rhel9_desktop-1024x576.png' or its corresponding type declarations.
+src/components/Portfolio.tsx(9,25): error TS2307: Cannot find module '../assets/images/6259f7d1d6bb00c05a6ab3b0_SEO-Slack-Header-p-3200.png' or its corresponding type declarations.
+src/components/Portfolio.tsx(10,25): error TS2307: Cannot find module '../assets/images/grafana-dashboard-english.png' or its corresponding type declarations.
+src/components/Portfolio.tsx(11,25): error TS2307: Cannot find module '../assets/images/cicdimage.png' or its corresponding type declarations.
+src/components/Portfolio.tsx(29,36): error TS2741: Property 'description' is missing in type '{ title: string; img: any; link: string; key: number; }' but required in type '{ img: any; title: any; description: any; link: any; }'.

@@ -3,19 +3,19 @@ import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 
 const Contact = () => {
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const messageRef = useRef();
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const formUrl =
       "https://docs.google.com/forms/d/e/1FAIpQLScd4a2cMmq9M7zpK_XwiEW6bixLqsjDjQPzjoWU6P_CD1HQFg/formResponse";
 
     const formBody = new URLSearchParams();
-    formBody.append("entry.1270603981", nameRef.current.value);
-    formBody.append("entry.486891414", emailRef.current.value);
-    formBody.append("entry.1000697639", messageRef.current.value);
+    formBody.append("entry.1270603981", nameRef.current?.value || "");
+    formBody.append("entry.486891414", emailRef.current?.value || "");
+    formBody.append("entry.1000697639", messageRef.current?.value || "");
 
     fetch(formUrl, {
       method: "POST",
@@ -46,18 +46,18 @@ const Contact = () => {
               </p>
             </div>
             <div className="space-y-4">
-                <a href="mailto:sureshyuvaraj2003@gmail.com" className="flex items-center group">
-                    <Mail className="text-red-500 mr-4"/>
-                    <span className="text-gray-300 group-hover:text-red-400 transition-colors">sureshyuvaraj2003@gmail.com</span>
-                </a>
-                <a href="tel:+919841721640" className="flex items-center group">
-                    <Phone className="text-red-500 mr-4"/>
-                    <span className="text-gray-300 group-hover:text-red-400 transition-colors">+91 98417 21640</span>
-                </a>
+              <a href="mailto:sureshyuvaraj2003@gmail.com" className="flex items-center group">
+                <Mail className="text-red-500 mr-4" />
+                <span className="text-gray-300 group-hover:text-red-400 transition-colors">sureshyuvaraj2003@gmail.com</span>
+              </a>
+              <a href="tel:+919841721640" className="flex items-center group">
+                <Phone className="text-red-500 mr-4" />
+                <span className="text-gray-300 group-hover:text-red-400 transition-colors">+91 98417 21640</span>
+              </a>
             </div>
             <div className="flex space-x-4 pt-4">
-                <a href="https://github.com/YUVARAJ-2K3" className="p-3 bg-gray-800 rounded-full hover:bg-red-600 transition-colors"><Github/></a>
-                <a href="https://www.linkedin.com/in/yuvaraj-s-542053256/" className="p-3 bg-gray-800 rounded-full hover:bg-red-600 transition-colors"><Linkedin/></a>
+              <a href="https://github.com/YUVARAJ-2K3" className="p-3 bg-gray-800 rounded-full hover:bg-red-600 transition-colors"><Github /></a>
+              <a href="https://www.linkedin.com/in/yuvaraj-s-542053256/" className="p-3 bg-gray-800 rounded-full hover:bg-red-600 transition-colors"><Linkedin /></a>
             </div>
           </div>
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -80,7 +80,7 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Message"
-              rows="5"
+              rows={5}
               ref={messageRef}
               className="w-full p-4 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
               required
